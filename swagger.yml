@@ -1,0 +1,44 @@
+# Swagger 2.0 always begin with the following
+swagger: "2.0"
+
+info:
+  version: "0.0.1"
+  title: Vacations API
+  description: This should be a detailed description for swagger docs
+  contact:
+    name: David E Lares S
+    url: https://davidlares.com
+    email: david.e.lares@gmail.com
+
+  license:
+    name: MIT
+    url: http://localhost:3000
+
+# during dev, should point to your local machine
+host: localhost:3000
+# basePath prefixes all resource paths- Version 1.0
+basePath: /v1/
+#
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+# Tags for ACME Travel API
+tags:
+  - name: vacations
+    description: Refer to vacation packages that are offered by the API travel
+
+  - name: hotels
+    description: Refer to partner hotels through which are offered by the API.
+  - name: package
+    description: Same as vacations. It refers to the vacation package.
+
+externalDocs:
+    description: This is an external doc
+    url: http://developer.localhost:3000/docs
